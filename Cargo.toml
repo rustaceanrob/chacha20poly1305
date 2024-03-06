@@ -1,0 +1,25 @@
+[package]
+name = "rust_chacha20poly1305"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "ChaCha2Poly1305 authenticated messages."
+repository = "https://github.com/rustaceanrob/rust_chacha20poly1305"
+readme = "README.md"
+rust-version = "1.56.1"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rust_chacha20 = "0.2.0"
+num-bigint = "0.4.4"
+
+
+[dev-dependencies]
+hex = "0.4.3"
+chacha20poly1305 = "0.10.1"
+rand = "0.8.4"
+
+[lib]
+name = "chacha20poly1305"
+path = "src/lib.rs"
