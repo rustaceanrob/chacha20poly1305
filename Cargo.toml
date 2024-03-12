@@ -12,8 +12,6 @@ rust-version = "1.56.1"
 
 [dependencies]
 rust_chacha20 = "0.2.0"
-num-bigint = "0.4.4"
-
 
 [dev-dependencies]
 hex = "0.4.3"
