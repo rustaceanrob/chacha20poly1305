@@ -1,6 +1,6 @@
 [package]
 name = "chachapoly"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT"
 description = "ChaCha2Poly1305 authenticated messages."
@@ -12,7 +12,6 @@ rust-version = "1.56.1"
 
 [dependencies]
 rust_chacha20 = "0.2.0"
-hex = "0.4.3"
 
 [dev-dependencies]
 hex = "0.4.3"

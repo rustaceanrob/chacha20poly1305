@@ -29,7 +29,7 @@ impl ChaCha20Poly1305 {
         let mut poly = Poly1305::new(keystream[..32].try_into().expect("32 is a valid subset of 64."));
         let aad = aad.unwrap_or(&[]);
         poly.add(aad);
-        poly.add(&plaintext);
+        poly.add(plaintext);
         let aad_len = aad.len().to_le_bytes();
         let msg_len = plaintext.len().to_le_bytes();
         let mut len_buffer = [0u8; 16];
@@ -60,7 +60,7 @@ impl ChaCha20Poly1305 {
         if ciphertext.len() >= 16 {
             let (received_msg, received_tag) = ciphertext.split_at_mut(ciphertext.len()- 16);
             poly.add(aad);
-            poly.add(&received_msg);
+            poly.add(received_msg);
             let aad_len = aad.len().to_le_bytes();
             let msg_len = received_msg.len().to_le_bytes();
             let mut len_buffer = [0u8; 16];
