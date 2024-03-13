@@ -29,12 +29,3 @@ impl fmt::Display for ChaCha20Poly1305EncryptionError {
         }
     }
 }
-
-// impl Error for ChaCha20Poly1305DecryptionError {
-//     fn source(&self) -> Option<&(dyn Error + 'static)> {
-//         match self {
-//             ChaCha20Poly1305DecryptionError::UnauthenticatedAdditionalData(_s) => None,
-//             ChaCha20Poly1305DecryptionError::CiphertextTooShort(_s) => None,
-//         }
-//     }
-// }

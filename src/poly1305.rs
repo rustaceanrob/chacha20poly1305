@@ -74,7 +74,7 @@ impl Poly1305 {
         for (i, t) in t.iter().enumerate().take(self.acc.len()) {
             self.acc[i] = t & mask | self.acc[i] & !mask;
         }
-        // voodoo from donna
+        // voodoo from donna to convert to [u32; 4]
         let a0 = self.acc[0] | self.acc[1] << 26;
         let a1 = self.acc[1] >> 6 | self.acc[2] << 20;
         let a2 = self.acc[2] >> 12 | self.acc[3] << 14;
